@@ -13,4 +13,5 @@ default['kibana']['webserver_aliases'] = [node.ipaddress]
 default['kibana']['webserver_listen'] = node.ipaddress
 default['kibana']['webserver_port'] = 80
 
-default['kibana']['webserver_docroot'] = 'current'
+# relative to /current; currently set to serve from /current/src (i.e. a git checkout)
+default['kibana']['webserver_docroot'] = 'src'

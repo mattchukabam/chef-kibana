@@ -49,7 +49,7 @@ link "#{node['kibana']['installdir']}/current" do
   to "#{node['kibana']['installdir']}/#{node['kibana']['branch']}"
 end
 
-template "#{node['kibana']['installdir']}/current/config.js" do
+template "#{node['kibana']['installdir']}/current/#{node['kibana']['webserver_docroot']}/config.js" do
   source node['kibana']['config_template']
   cookbook node['kibana']['config_cookbook']
   mode "0750"
